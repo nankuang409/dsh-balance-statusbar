@@ -21,6 +21,19 @@ DeepSeek Harness（DSH）**web GUI** 插件：在页面**底部**固定一条浅
 - 跟随应用浅色/深色模式（仅使用既有 `--dsw-*` 主题 token）。
 - API key 永不出机器：浏览器只与本机宿主路由通信。
 
+## 兼容性
+
+| 项 | 要求 |
+|---|---|
+| DSH | **0.1.5-rc.1**（当前 npm `latest`）上实测可用；已知也兼容 `>=0.1.0-rc.6 <0.2.0` 的 credentials seam |
+| Node | >= 20 |
+| 宿主服务 | `credentials` · `webServer` · `sessionProjections`（`@deepseek-ai/dsh-session-projection`） |
+| 客户端服务 | `slots`（`shell.overlay` 槽位） |
+
+框架包一律走 `peerDependencies`，由宿主 profile 提供，插件不自带副本——避免 credentials seam 出现两份实例导致凭据引用对不上。
+
+> 未在 `next`（0.1.5-rc.2）及 0.2.x 上验证过。
+
 ## 安装
 
 需要 DSH CLI 与 [pnpm](https://pnpm.io/installation)。

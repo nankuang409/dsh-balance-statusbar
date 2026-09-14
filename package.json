@@ -1,6 +1,6 @@
 {
   "name": "dsh-balance-statusbar",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "DeepSeek Harness (DSH) web GUI 底部状态栏插件：原会话统计条（轮数/步数 · LLM/工具时长 · 首 token · 解码吞吐 · 缓存命中 · 输入/输出 token）与 DeepSeek API 费用（总余额 · 今日消费 · 当前对话费用）合为一条。",
   "type": "module",
   "main": "lib/index.js",
@@ -44,7 +44,13 @@
     "web"
   ],
   "license": "MIT",
-  "dependencies": {
-    "@deepseek-ai/dsh-credentials": "^0.1.0-rc.6"
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-credentials": ">=0.1.0-rc.6 <0.2.0"
+  },
+  "devDependencies": {
+    "@deepseek-ai/dsh-credentials": "0.1.5-rc.1"
   }
 }
