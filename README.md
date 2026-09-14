@@ -2,6 +2,14 @@
 
 DeepSeek Harness（DSH）**web GUI** 插件：在页面**底部**固定一条浅色状态栏，**原会话统计条（轮数/步数 · LLM/工具时长 · 首 token · 解码吞吐 · 缓存命中 · 输入/输出 token）＋ 费用（总余额 · 今日消费 · 当前对话费用）** 合为一条，风格对齐内置统计条。
 
+![状态栏](docs/statusbar.png)
+
+鼠标悬停「当前对话费用」，展开本会话 / 各子 agent / 按 token 类型的计价明细：
+
+![费用明细](docs/statusbar-hover.png)
+
+> 截图中的金额与 token 数为演示数据。
+
 > 独立插件：自带宿主路由（`/api/balance-statusbar`），不依赖任何其他插件。统计数据直接复用框架内置会话投影（`sessionStats` + `tokenUsage`），与 UI 内置统计条 **StatsLine 完全同源**——不会丢失原来的统计。
 
 ## 功能
