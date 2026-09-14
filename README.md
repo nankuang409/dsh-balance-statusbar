@@ -28,7 +28,7 @@ DeepSeek Harness（DSH）**web GUI** 插件：在页面**底部**固定一条浅
 尚未发布到 npm，先克隆再按本地路径安装：
 
 ```sh
-git clone https://github.com/<owner>/dsh-balance-statusbar.git
+git clone https://github.com/nankuang409/dsh-balance-statusbar.git
 cd dsh-balance-statusbar
 pnpm install
 dsh plugin --profile web add .
